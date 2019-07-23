@@ -19,7 +19,7 @@ public class BrowserConfigurations {
             throws Exception {
         DesiredCapabilities capabilities = DesiredCapabilities.internetExplorer();
         return new DesktopBrowser(capabilities, appium_uri, "results/ie/",
-                            header, "Windows 8.1 - Internet Explorer 11",
+                            header, "Windows 10 - Internet Explorer 11",
                             new WebDriverCoordsProvider(), 1);
     }
 
@@ -27,7 +27,7 @@ public class BrowserConfigurations {
             throws Exception {
         DesiredCapabilities capabilities = DesiredCapabilities.chrome();
         return new DesktopBrowser(capabilities, appium_uri, "results/chrome_win/",
-                            header, "Windows 8.1 - Chrome 60.0.3112.113",
+                            header, "Windows 10 - Chrome 75.0.3683.103",
                             new WebDriverCoordsProvider(), 1);
     }
 
@@ -35,7 +35,7 @@ public class BrowserConfigurations {
             throws Exception {
         DesiredCapabilities capabilities = DesiredCapabilities.firefox();
         return new DesktopBrowser(capabilities, appium_uri, "results/firefox_win/",
-                            header, "Windows 8.1 - Firefox 53.0.3",
+                            header, "Windows 10 - Firefox 66.0.2",
                             new WebDriverCoordsProvider(), 1);
     }
 

@@ -22,12 +22,12 @@ public class Merger {
 
         String [] comparisons = {
 //            "ipadAir2-galaxyTabS2"
-//            "chrome_win-firefox_win",
+            "chrome_win-firefox_win",
 //            "chrome_win-ie",
 //            "iphonese-motog4",
-            "iphone8-iphonese",
-            "iphone8-iphone8plus",
-            "iphone8-motog4",
+           // "iphone8-iphonese",
+           // "iphone8-iphone8plus",
+          //  "iphone8-motog4",
 //            "motog4-iphonese",
 //            "motog4-iphone8plus",
 //            "motog4-iphone8",

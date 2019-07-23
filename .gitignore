@@ -3,3 +3,4 @@ target/*
 .DS_Store
 log/*
 opencv-3.4.5/build/*
+/target/

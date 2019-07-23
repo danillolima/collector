@@ -4,7 +4,6 @@ http://www.amegaloja.com.br/
 https://www.ornamentum.com.br/
 https://www.casadascapotas.com.br/
 https://www.brshops.com/
-http://www.babyway.com.br/
 https://www.aluafestas.com.br/
 https://www.divinoluxo.com.br/
 https://www.moveisaqui.com.br/
@@ -12,7 +11,6 @@ http://www.runnalaser.com.br/
 https://www.saiabella.com/
 https://www.lojatelsom.com.br/
 https://www.connectparts.com.br/
-https://www.myshopbrasil.com.br/
 https://www.azacessorios.com.br/
 http://www.youtube.com
 http://www.facebook.com
@@ -24,4 +22,4 @@ http://www.yahoo.com
 http://www.instagram.com
 http://www.netflix.com
 http://www.olx.com.br
-http://www.blastingnews.com.br
+https://booking.viagens.com.br/

@@ -1,5 +1,7 @@
 package edu.utfpr.xbi.collector;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebDriverException;
@@ -31,11 +33,13 @@ public class BrowserCollector {
     public void crawl () throws Exception {
         WebElement target, parent;
         this._takeScreenshot();
+        this.executor.wait(10000);
         int size = Integer.parseInt(
                 this.executor.executeScript(JSCodes.QUERY_ALL_ELEMENTS).toString());
 
         for (int i = (size-1); i >= 0; i--) {
             try {
+            	this.driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
                 target = (WebElement)(this.executor.executeScript(
                             String.format(JSCodes.GET_ELEMENT, i)));
                 parent = (WebElement)(this.executor.executeScript(

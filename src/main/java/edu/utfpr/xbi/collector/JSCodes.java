@@ -87,18 +87,22 @@ public class JSCodes {
         "      aux = aux.parentElement;" +
         "   next_sibling = aux.nextElementSibling;" +
         "" +
-        "   target.childNodes.forEach(function(node) { if(node.nodeType === 3) text_nodes++; });" +
-        "" +
+        " aux = target;"+
+        " Array.prototype.slice.call(target.childNodes, 0).forEach(function(node) { if(node.nodeType === 3) text_nodes++; });" +
+        " if(aux.isVisible() && " +
+        "$(aux).offset() != null && " + 
+        "$(previous_sibling).offset() != null &&" +
+        "$(parent).offset() != null)  { " +
         "   if (tagName && tagName !== 'HTML' && " +
                            "tagName !== 'SCRIPT' && " +
                            "tagName !== 'STYLE' && " +
                            "tagName !== 'LINK' && " +
                            "tagName !== 'NOSCRIPT' && " +
+                           "" +
                            "parseInt($(target).outerWidth()) !== 0 && " +
                            "parseInt($(target).outerHeight()) !== 0 && " +
                            "parseInt($(target).outerWidth() + $(target).offset().left) > 0 && " +
-                           "parseInt($(target).offset().left) < viewportWidth && " +
-                           "target.isVisible()) {" +
+                           "parseInt($(target).offset().left) < viewportWidth) {" +
         "       var row = path + ',' + url + ',' + i + ',' + target.tagName + ',' + browser + ',' +" +
         "           parseInt($(target).offset().left) + ',' + " +
         "           parseInt($(target).offset().top) + ',' + " +
@@ -116,7 +120,8 @@ public class JSCodes {
         "           text_nodes + ',' + " +
         "           font_family;" +
         "       window.rows.push(row);" +
-        "   }" +
+        "   }"+
+        "}" +
         "}" +
         "return window.rows.join('\\n');";
 }
