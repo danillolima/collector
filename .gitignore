@@ -4,3 +4,5 @@ target/*
 log/*
 opencv-3.4.5/build/*
 /target/
+opencv-2.4.9/*
+results/
