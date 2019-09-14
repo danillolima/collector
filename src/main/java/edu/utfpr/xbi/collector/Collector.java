@@ -28,8 +28,8 @@ public class Collector {
         //list.add(BrowserConfigurations.safari("http://192.168.92.1:4444/wd/hub/", 0, -1));
         //list.add(BrowserConfigurations.chromeMac("http://192.168.92.1:4444/wd/hub/", header, -1));
         //list.add(BrowserConfigurations.firefoxMac("http://192.168.92.1:4444/wd/hub/", header, -1));
-     //   list.add(BrowserConfigurations.chromeWin("http://10.0.75.1:4444/wd/hub", header, -1));
-      //  list.add(BrowserConfigurations.firefoxWin("http://10.0.75.1:4444/wd/hub", header, -1));
+        //list.add(BrowserConfigurations.chromeWin("http://192.168.44.59:4444/wd/hub", header, -1));
+        //list.add(BrowserConfigurations.firefoxWin("http://192.168.44.59:4444/wd/hub", header, -1));
         list.add(BrowserConfigurations.ie("http://10.0.75.1:4444/wd/hub", header, -1));
         //list.add(BrowserConfigurations.operaWin("http://192.168.0.15:4444/wd/hub", header, -1));
         // *** TABLET ***
@@ -47,8 +47,8 @@ public class Collector {
                    // }
                    
                     BrowserCollector c = browser.createCollector(target);
-                    c.getDriver().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-                    c.getDriver().manage().timeouts().setScriptTimeout(100, TimeUnit.SECONDS);
+                    //c.getDriver().manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
+                   // c.getDriver().manage().timeouts().setScriptTimeout(100, TimeUnit.SECONDS);
                     c.crawl();
                     c.getDriver().close();
                     count = 3;

@@ -21,9 +21,9 @@ import edu.utfpr.xbi.collector.writer.SimpleWriter;
 import edu.utfpr.xbi.collector.BrowserCollector;
 import edu.utfpr.xbi.collector.BrowserCollectorJS;
 
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.coordinates.CoordsProvider;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+import pazone.ashot.AShot;
+import pazone.ashot.coordinates.CoordsProvider;
+import pazone.ashot.ShootingStrategies;
 
 public class MobileBrowser implements Browsers {
 	private DesiredCapabilities capabilities;

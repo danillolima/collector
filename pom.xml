@@ -37,11 +37,6 @@
           <version>4.1.2</version>
       </dependency>
       <dependency>
-          <groupId>ru.yandex.qatools.ashot</groupId>
-          <artifactId>ashot</artifactId>
-          <version>1.5.5-SNAPSHOT</version>
-      </dependency>
-      <dependency>
           <groupId>org.mockito</groupId>
           <artifactId>mockito-core</artifactId>
           <version>2.10.0</version>
@@ -66,5 +61,10 @@
           <artifactId>sa-jdi</artifactId>
           <version>1.0</version>
       </dependency>
+    <dependency>
+      <groupId>pazone</groupId>
+      <artifactId>ashot</artifactId>
+      <version>1.5.5-SNAPSHOT</version>
+    </dependency>
   </dependencies>
 </project>

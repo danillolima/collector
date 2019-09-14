@@ -22,10 +22,10 @@ import edu.utfpr.xbi.collector.writer.SimpleWriter;
 import edu.utfpr.xbi.collector.BrowserCollector;
 import edu.utfpr.xbi.collector.BrowserCollectorJS;
 
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.coordinates.CoordsProvider;
-import ru.yandex.qatools.ashot.coordinates.JqueryCoordsProvider;
-import ru.yandex.qatools.ashot.shooting.ShootingStrategies;
+import pazone.ashot.AShot;
+import pazone.ashot.coordinates.CoordsProvider;
+import pazone.ashot.coordinates.JqueryCoordsProvider;
+import pazone.ashot.ShootingStrategies;
 
 public class DesktopBrowser implements Browsers {
 	private DesiredCapabilities capabilities;
@@ -80,6 +80,7 @@ public class DesktopBrowser implements Browsers {
 
         System.out.println(String.format("=== %s ===", this.device));
         File screenshot2 = new File(this.folder + "complete-resolution.png");
+
         File temp = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         FileUtils.copyFile(temp, screenshot2);
         temp.delete();
@@ -107,9 +108,15 @@ public class DesktopBrowser implements Browsers {
             "})();"
         );
 
-        AShot ashot = new AShot().shootingStrategy(
-			ShootingStrategies.viewportRetina(100, this.header, 0, this.dpr))
-			.coordsProvider(provider);
+      //  if(this.capabilities.getBrowserName().compareTo("internet explorer") == 0){
+               
+          //  System.out.println("aaaaaaa1");
+        //    ashot = new AShot(ShootingStra);
+        //}
+       /// else{
+            AShot ashot = new AShot().shootingStrategy(ShootingStrategies.viewportPasting(1000))
+                            .coordsProvider(provider);
+          //  }
 
         BrowserCollectorJS collector = new BrowserCollectorJS();
         SimpleWriter writer = new SimpleWriter(this.folder, url, this.deviceWidth,

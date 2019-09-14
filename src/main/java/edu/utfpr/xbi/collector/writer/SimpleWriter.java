@@ -14,11 +14,11 @@ import org.openqa.selenium.WebDriverException;
 import org.openqa.selenium.WebElement;
 
 import edu.utfpr.xbi.collector.JSCodes;
-import ru.yandex.qatools.ashot.AShot;
-import ru.yandex.qatools.ashot.Screenshot;
-import ru.yandex.qatools.ashot.coordinates.Coords;
-import ru.yandex.qatools.ashot.coordinates.CoordsProvider;
-import ru.yandex.qatools.ashot.cropper.ImageCropper;
+import pazone.ashot.AShot;
+import pazone.ashot.Screenshot;
+import pazone.ashot.coordinates.Coords;
+import pazone.ashot.coordinates.CoordsProvider;
+import pazone.ashot.cropper.ImageCropper;
 
 public class SimpleWriter implements Writer {
 
